@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>My Amazing Travels · Grade 7</title>
+<style>
+:root{--ink:#10283b;--muted:#456277;--night:#09273b;--blue:#d7edf4;--paper:#fffdf7;--sand:#f3e8d4;--teal:#076b67;--gold:#ffcf74;--line:#cbdfe1;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--night)}
+*{box-sizing:border-box}body{margin:0}button,a,input,select,textarea{font:inherit}button,a,.pick{min-height:44px}button,.button,.pick{border:1px solid var(--line);border-radius:12px;padding:.48em .8em;background:#fff;color:var(--ink);font-weight:650;cursor:pointer}button:hover,.button:hover,.pick:hover{background:#e0f4ef}button:disabled{opacity:.45;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d87419;outline-offset:3px}[hidden]{display:none!important}
+.shell{max-width:1920px;margin:auto;min-height:100dvh;display:grid;grid-template-rows:auto 1fr auto}.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:9px clamp(12px,3vw,56px);color:white}.bar button{color:#fff;background:#17435a;border-color:#52788a;font-size:clamp(14px,1.05vw,20px)}.bar button:hover{background:#286078}.brand{font-weight:750;letter-spacing:.08em;font-size:clamp(13px,1.1vw,20px)}.tools,.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.nav button:last-child{background:var(--gold);color:var(--night);border-color:var(--gold)}.progress{height:5px;background:#315165;flex:1;min-width:60px;border-radius:8px;overflow:hidden}.progress i{display:block;background:#66d7bd;height:100%;transition:width .35s}.counter{font-variant-numeric:tabular-nums}
+main{background:var(--paper);margin:0 clamp(8px,1.5vw,28px);border-radius:23px;overflow:hidden;display:grid;align-items:center;min-width:0}article{padding:clamp(20px,3.2vw,61px);font-size:clamp(17px,1.65vw,31px);animation:arrive .38s ease both;min-width:0}.eyebrow{font-size:.59em;text-transform:uppercase;letter-spacing:.17em;font-weight:850;color:var(--teal);margin:0 0 .75em}.heading{margin:0 0 .22em;font-size:clamp(29px,3.25vw,64px);line-height:1.03;letter-spacing:-.04em}.hero .heading{font-size:clamp(42px,6vw,112px);max-width:9ch}.ru{display:block;color:var(--muted);font-size:.87em;margin:.22em 0}.sub{margin:0 0 1em}.lede{font-size:1.13em;line-height:1.28}.grid{display:grid;gap:.6em;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{border:1px solid var(--line);background:white;border-radius:17px;padding:.72em .85em;box-shadow:0 7px 17px #1839450b;min-width:0}.card h2,.card h3{font-size:1.13em;margin:.15em 0 .33em}.card p{margin:.3em 0}.sky{background:var(--blue)}.sand{background:var(--sand)}.mint{background:#d9f0e7}.tag{display:inline-block;padding:.24em .62em;border-radius:25px;background:var(--sand);font-size:.69em;font-weight:750}.hero,.reading{grid-template-columns:1fr 1.1fr;align-items:center}.art{width:100%;height:auto;display:block;border-radius:15px}.hero .art{box-shadow:0 10px 26px #0d354323}.split{display:grid;gap:1em}.pair{margin:.5em 0}.reveal{display:block;text-align:left;width:100%;margin:.38em 0}.answer{padding:.38em .6em;background:#d9f0e7;border-radius:9px;margin:.35em 0}.option[aria-pressed=true]{background:#d4ecff;border-color:#417caa}.option.correct{background:#c1edda;border-color:#1f7659}.option.wrong{background:#ffe0d6;border-color:#a34733}.choices{display:flex;gap:.38em;flex-wrap:wrap;margin:.35em 0}.primary{background:var(--teal);color:white;border-color:var(--teal)}.primary:hover{background:#07524e}.quiz{margin:.45em 0}.quiz p{margin:.22em 0}.small{font-size:.76em}.prompts{display:grid;gap:.45em}.prompts p{margin:0}.pick,.button{display:inline-flex;align-items:center;text-decoration:none}.pick input{max-width:100%;font-size:.75em}.media video{width:100%;max-height:36vh;background:var(--night);border-radius:12px}.stamp{display:inline-block;border:3px double var(--teal);border-radius:10px;padding:.48em .65em;color:var(--teal);font-weight:850;letter-spacing:.06em;transform:rotate(-5deg);margin:.3em .6em .3em 0;animation:arrive .4s ease both}.notebook article{background:white}.notebook .card{box-shadow:none;background:white;border-color:#879aa4}.notebook .eyebrow,.notebook .sub{display:none}ul{padding-left:1.13em;margin:.3em 0}li+li{margin-top:.22em}dialog{width:min(920px,94vw);max-height:90dvh;overflow:auto;border:0;border-radius:20px;padding:24px;color:var(--ink);background:var(--paper);font-size:clamp(17px,1.35vw,23px)}dialog::backdrop{background:#041722b8}.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:1em}.dialog-head h2{margin:.3em 0}.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}.overview button{text-align:left}.overview button[aria-current=true]{background:var(--gold)}.notes dt{font-weight:750}.notes dd{margin:0 0 .6em}.route{stroke-dasharray:8 7;animation:route 12s linear infinite}@keyframes route{to{stroke-dashoffset:-150}}@keyframes arrive{from{opacity:.3;translate:0 8px}to{opacity:1;translate:0 0}}
+@media(max-width:730px){.grid,.three,.hero,.reading{grid-template-columns:1fr}.hero .art,.reading .art{max-height:255px}.bar{justify-content:center}.brand{width:100%;text-align:center}.progress{order:3;width:100%;flex-basis:100%}.prompts{gap:.6em}main{border-radius:15px}}
+/* Use the whole available viewport when presenting from a landscape phone. */
+.rotate-hint{display:none}
+@media (pointer:coarse) and (orientation:portrait) and (max-width:820px){
+ .rotate-hint{display:block;width:100%;margin:0;text-align:center;color:#d7edf4;font-size:13px}
+}
+@media (orientation:landscape) and (max-height:600px){
+ :root,body{background:var(--paper)}
+ .shell{width:100%;max-width:none;height:100dvh;min-height:0;grid-template-columns:auto minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;container-type:inline-size}
+ .shell main{grid-area:1 / 1 / 2 / -1;display:block;position:relative;margin:0;border-radius:0;overflow:auto;overscroll-behavior:contain}
+ .shell header{grid-area:2 / 1}.shell footer{grid-area:2 / 2}
+ .bar{color:var(--ink);background:var(--paper);border-top:1px solid var(--line);justify-content:space-between;flex-wrap:nowrap;padding:0 4px env(safe-area-inset-bottom,0px);gap:4px}
+ .shell header{padding-left:max(4px,env(safe-area-inset-left,0px))}
+ .shell footer{padding-right:max(4px,env(safe-area-inset-right,0px))}
+ .brand{display:none}.bar button{font-size:11px;padding:0 5px;min-height:44px;background:#fff;color:var(--ink);border-color:var(--line)}
+ .bar button:hover{background:#e0f4ef}.tools,.nav{gap:3px;flex-wrap:nowrap}.progress{display:none}.counter{font-size:11px;white-space:nowrap}
+ article{padding:clamp(6px,1.45cqw,16px) max(3.2cqw,env(safe-area-inset-right,0px)) clamp(6px,1.45cqw,16px) max(3.2cqw,env(safe-area-inset-left,0px));font-size:clamp(14px,2.2cqw,23px)}
+ .shell main[data-fitted]{overflow:hidden}
+ .shell main[data-fitted] article{position:absolute;top:0;left:0;width:100%;transform-origin:top center;transform:translateY(var(--slide-offset)) scale(var(--slide-scale));animation:none}
+ .heading{font-size:clamp(22px,4.15cqw,44px)}.hero .heading{font-size:clamp(30px,7cqw,64px)}
+ .grid,.hero,.reading{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .shell article .art{max-height:30dvh}.shell .hero .art,.shell .reading .art{max-height:46dvh}
+ .sub{margin-bottom:.38em}.pair{margin:.18em 0}.card{padding:.34em .53em}.quiz{margin:.2em 0}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell" id="shell">
+<header class="bar"><span class="brand">✈ &nbsp; MY AMAZING TRAVELS</span><div class="tools">
+<button id="home">Home</button><button id="overview">Slides</button><button id="teacher">Teacher mode</button><button id="fullscreen">Fullscreen</button>
+</div><p class="rotate-hint">Rotate your phone for 16:9 · Поверните телефон горизонтально</p></header>
+<main id="stage" aria-label="Current slide" tabindex="0"></main>
+<footer class="bar"><span class="counter" id="counter" aria-live="polite"></span><span class="progress" id="progress" role="progressbar" aria-label="Lesson progress"><i></i></span><div class="nav"><button id="prev" aria-label="Previous slide">← Previous</button><button id="next" aria-label="Next slide">Next →</button></div></footer>
+</div>
+<dialog id="modal" aria-labelledby="modalTitle"><div class="dialog-head"><h2 id="modalTitle"></h2><button id="close">Close</button></div><div id="modalBody"></div></dialog>
+<script>
+'use strict';
+const byId = id => document.getElementById(id);
+const ru = text => '<span class="ru" lang="ru">' + text + '</span>';
+const pair = (en, translation) => '<div class="pair">' + en + ru(translation) + '</div>';
+const card = (title, content, tone = '') => '<div class="card ' + tone + '"><h3>' + title + '</h3>' + content + '</div>';
+const reveal = (id, label, content) => '<button class="reveal" data-reveal="' + id + '" aria-expanded="false" aria-controls="' + id + '">' + label + ' <span aria-hidden="true">＋</span></button><div class="answer" id="' + id + '" hidden>' + content + '</div>';
+const svg = (label, content, view = '0 0 600 320') => '<svg class="art" role="img" aria-label="' + label + '" viewBox="' + view + '" xmlns="http://www.w3.org/2000/svg">' + content + '</svg>';
+const map = svg('World map showing a travel route from Kazakhstan to Australia', `
+<rect width="600" height="320" fill="#103d56"/>
+<path d="M25 76l35-23 66-11 30 16 57-19 18 26-34 20-26 36-38 18-19 32-28-20-10-32-40-20z M141 169l40 3 33 35-18 45-43 46-13-43 9-35-23-26z M240 41l30-12 22 14-12 39-27 14-18-23z M287 111l32-24 49-5 46-28 62 3 60 13 39 35-38 14-26 40-33 2-11 36-27-33-27-7-11-24-50 6-27-17z M296 144l55-12 34 26-19 70-24 26-32-29-6-42-22-22z M485 209l40-11 44 31-9 37-53 8-36-21z M454 184l43 15-10 6-35-13z" fill="#9fc9bd"/>
+<path d="M416 109Q528 107 529 239" fill="none" stroke="#ffcf74" stroke-width="4" class="route"/>
+<circle cx="416" cy="109" r="7" fill="#ffcf74"/><circle cx="529" cy="239" r="7" fill="#ffcf74"/>
+<g font-family="system-ui" font-size="19" font-weight="750"><text x="330" y="104" fill="#10283b">Kazakhstan</text><text x="483" y="261" fill="#10283b">Australia</text><text x="488" y="155" fill="#ffcf74" font-size="31" transform="rotate(35 488 155)">✈</text></g>`);
+const bugs = svg('Illustration of cockroaches racing from the middle of a circular track', `
+<rect width="600" height="320" fill="#f1e2c6"/><ellipse cx="300" cy="162" rx="245" ry="123" fill="#f9cb70" stroke="#112f43" stroke-width="8"/><ellipse cx="300" cy="162" rx="199" ry="93" fill="none" stroke="#9e622d" stroke-width="3" stroke-dasharray="10 9"/><circle cx="300" cy="162" r="12" fill="#a35536"/>
+<defs><g id="bug" fill="#673421" stroke="#3a251d" stroke-width="4" stroke-linecap="round"><path d="M-8 -19l-15-21m32 21 15-21M-12-10l-20-7m20 19-23 6m25 4-19 15M12-10l20-7m-20 19 23 6m-25 4 19 15" fill="none"/><ellipse rx="16" ry="26"/><path d="M0 -13v35" stroke="#d78853"/></g></defs>
+<use href="#bug" transform="translate(210 118) rotate(-58)"/><use href="#bug" transform="translate(380 139) rotate(53) scale(.8)"/><use href="#bug" transform="translate(327 226) rotate(146) scale(.9)"/>`);
+const horse = svg('Illustration of a rider leaning from a galloping horse to reach a cloth', `
+<rect width="600" height="320" fill="#cbe7ed"/><circle cx="470" cy="70" r="37" fill="#ffcf74"/><path d="M0 199q97-68 183-36t147 5 270-13v165H0z" fill="#96c6ad"/><path d="M0 257q130-46 301-18t299-29v110H0z" fill="#e8cf9d"/>
+<path d="M195 184q-43 1-60 41" fill="none" stroke="#472e2b" stroke-width="12" stroke-linecap="round"/><g fill="#794537"><path d="M178 175q54-35 129-17l38 4 35-68 28 7 46 27-12 20-39-7-19 62-38 20-125-9q-45-4-43-39z"/><path d="M219 198l36 11-18 38-52 25-9-10 39-35zm70 5 25-2-7 49 38 21-8 11-55-21zm54 1 28-14 18 37 50 12-4 14-66-7zm-118-3-27 2-24 33-51 1 1 12 62 3z"/></g><path d="M365 117l16-25 10-10 9 16" fill="#472e2b"/><circle cx="420" cy="121" r="4" fill="#172534"/><path d="M252 154l72 1 1 24-77 0z" fill="#e8b265"/>
+<path d="M271 143q12-30 37-29l45 16-7 30-51-9-20 23-17-9z" fill="#173e50"/><path d="M337 141l19 38 19 61" stroke="#173e50" stroke-width="14" fill="none" stroke-linecap="round"/><path d="M374 240l7 19" stroke="#b27450" stroke-width="9" stroke-linecap="round"/><circle cx="350" cy="127" r="13" fill="#bd865e"/><path d="M336 123q1-23 25-12l7 11z" fill="#2b3035"/><path d="M378 278l30-10 10 15-29 7z" fill="#f9f6ec" stroke="#61797e" stroke-width="2"/>`);
+const words = [
+['Cockroach','таракан','A cockroach is an insect.','Таракан — это насекомое.','♧'],
+['Race','гонка','The race starts now.','Гонка начинается сейчас.','⚑'],
+['Argument','спор','Two people had an argument.','Два человека поспорили.','↔'],
+['Crowd','толпа','A crowd watched the race.','За гонкой наблюдала толпа.','◉'],
+['Gallop','скакать галопом','At a full gallop.','Во весь опор.','➟'],
+['Saddle','седло','The rider sits in the saddle.','Всадник сидит в седле.','◒'],
+['Lean down','наклониться вниз','The rider leans down.','Всадник наклоняется вниз.','↘'],
+['Snatch up','быстро подхватить','She snatches up the cloth.','Она быстро подхватывает ткань.','↗'],
+['Handkerchief','носовой платок','He picks up a handkerchief.','Он поднимает носовой платок.','◇'],
+['Grab','схватить','He grabs the handkerchief.','Он хватает платок.','✦'],
+['Speed','скорость','The horse moves at high speed.','Лошадь скачет на большой скорости.','»'],
+['On display','на обозрении','Their skill is on display.','Они демонстрируют своё мастерство.','◎']
+];
+const vocabulary = (start,end) => '<div class="grid three">' + words.slice(start,end).map(([word,tr,example,exampleRu,icon]) => card('<span aria-hidden="true">' + icon + '</span> ' + word, ru(tr) + '<p class="small">' + example + ru(exampleRu) + '</p>')).join('') + '</div>';
+const tf = [
+['The cockroach races began after two people disagreed about something.','T','Гонки начались после спора двух мужчин в Брисбене.','Two men argued about which part of town had the biggest and fastest cockroaches.'],
+['Cockroaches have to run in a straight line during the races.','F','В тексте описана гонка из центра круга к его краю.','Corrected: Cockroaches race from the centre of a circle to its edge.'],
+['Alexander the Great was excellent at Kumis alu.','DS','Александр Македонский считал игру хорошей тренировкой для всадников. О том, насколько хорошо он сам играл, в тексте ничего не сказано.','The passage describes his opinion about rider training.'],
+["People in Kazakhstan don't like Kumis alu.",'F','В тексте сказано, что игра до сих пор популярна в Казахстане.','Corrected: Kumis alu is still popular in Kazakhstan.']
+];
+const vocabQuiz = [
+['What does “crowd” mean?','толпа','Crowd means «толпа».','седло','толпа','скорость'],
+['Which phrase means «наклониться вниз»?','Lean down','Lean down means «наклониться вниз».','Lean down','Snatch up','On display'],
+['What does the rider grab in the text?','A handkerchief','The riders pick up handkerchiefs.','A saddle','A handkerchief','A hat']
+];
+const quiz = (prefix, items, offset = 0) => items.map(([question,correct,explanation,...extras], i) => {
+ const n = i + offset;
+ const options = prefix === 'tf' ? ['T','F','DS'] : extras;
+ return '<div class="card quiz" data-quiz="' + prefix + n + '"><p class="eyebrow">Question ' + (n+1) + ' of ' + (prefix === 'tf' ? 4 : 3) + '</p><p><strong>' + question + '</strong></p><div class="choices" role="group" aria-label="Answer choices">' + options.map(value => '<button class="option" aria-pressed="false">' + value + '</button>').join('') + (prefix === 'tf' ? '<button class="primary check" disabled>Check</button>' : '') + '</div><div class="feedback small" aria-live="polite"></div></div>';
+}).join('');
+const reset = '<button data-reset class="small">Reset quiz answers</button>';
+const slides = [];
+const add = (title,phase,subtitle,body,notes,style = '') => slides.push({title,phase,subtitle,body,notes,style});
+add('My Amazing Travels','01 / Departures','',`<div class="grid hero"><div><p class="eyebrow">Across Cultures 3e · Grade 7 · Page 37</p><h1 class="heading" tabindex="-1">My Amazing Travels</h1><p class="lede"><strong>Unusual Sports Around the World</strong>${ru('Необычные виды спорта в разных странах мира')}</p><span class="tag">Kazakhstan ⇄ Australia</span></div>${map}</div>`,['0:00–2:00','Good morning! Today we are travelling to two countries to discover unusual sports.','Доброе утро! Сегодня мы отправимся в две страны, чтобы познакомиться с необычными видами спорта.','Greet the class and ask students to name the two countries shown on the map.','Kazakhstan and Australia.','Point to both destinations before going to the next slide.']);
+add('Today we will…','01 / Departures','Цели урока','<div class="grid three">'+card('✦ Learn',pair('Learn new vocabulary.','Изучим новые слова.'),'sky')+card('▤ Read',pair('Read about unusual sports.','Прочитаем о необычных видах спорта.'),'sand')+card('◉ Speak',pair('Share our opinions.','Выразим своё мнение.'),'mint')+'</div>',['2:00–3:00','We will learn some words, read two texts and say which event we would like to attend.','Мы выучим новые слова, прочитаем два текста и скажем, какое мероприятие хотели бы посетить.','Invite students to repeat the three action verbs.','Learn, read, speak.','Keep this stage short.']);
+add('Can you guess the sport?','02 / Warm-up · Exercise 1','Угадай вид спорта!', '<div class="grid"><div>'+bugs+reveal('guess-a','Reveal Sport A','Cockroach Racing · Australia'+ru('Гонки тараканов · Австралия'))+'</div><div>'+horse+reveal('guess-b','Reveal Sport B','Kumis Alu · Kazakhstan'+ru('Күміс алу · Казахстан'))+'</div></div><div class="grid three small">'+pair('What can you see?','Что вы видите?')+pair('Are these real sports?','Это настоящие виды спорта?')+pair('Which sport looks more unusual?','Какой вид спорта выглядит необычнее?')+'</div><p class="small">Think of three questions about the sports. Check them when you read.'+ru('Придумайте три вопроса о видах спорта. Найдите ответы при чтении.')+'</p>',['3:00–7:00','Look at these pictures. What do you think these people are doing? Both sports are real!','Посмотрите на картинки. Как вы думаете, что делают эти люди? Оба вида спорта настоящие!','In pairs, make three questions. Reveal the names after guessing. Revisit the questions during reading.','I can see insects and a rider. Where do they race? How do they win? What does the rider pick up?','Use pictures and reading in place of textbook audio.']);
+add('Check these words','03 / Vocabulary · Part 1','Новые слова',vocabulary(0,6),['7:00–8:45','Before reading, let’s learn some new words. Listen and repeat.','Перед чтением давайте выучим несколько новых слов. Послушайте и повторите.','Read each word and ask learners to repeat it.','Race = гонка. Argument = спор. Crowd = толпа.','Point to the translation after saying each English word.']);
+add('Check these words','03 / Vocabulary · Part 2','Новые слова',vocabulary(6,12),['8:45–10:30','Can you show me what “lean down” and “grab” mean?','Можете показать, что значат “lean down” и “grab”?','Ask learners to mime the two actions and say each phrase.','Lean down = наклониться вниз. Grab = схватить.','Read “on display” in the context of demonstrating skill.']);
+add('Quick word check','03 / Vocabulary · Practice','Проверьте, как вы запомнили слова',quiz('v',vocabQuiz)+reset,['10:30–12:00','Choose the best answer for each question.','Выберите подходящий ответ на каждый вопрос.','Ask the class to vote before a volunteer taps each answer.','толпа, Lean down, A handkerchief.','Feedback is immediate. Invite students to retry after an incorrect choice.']);
+add('Let’s watch!','04 / Video stop','Необычные виды спорта',`<div class="grid media"><div class="card sky"><h3>Video A · Cockroach Racing</h3><div class="choices"><a class="button" target="_blank" rel="noopener" href="https://www.upi.com/Odd_News/2016/01/26/Australia-Day-revelers-race-cockroaches-at-Brisbane-hotel/2531453835234/">UPI article</a><a class="button" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Australia+cockroach+racing+Brisbane+short">YouTube search</a></div><h3>Video B · Kumis Alu</h3><div class="choices"><a class="button" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Kumis+Alu+Tenge+Ilu+Kazakhstan+short">YouTube search</a></div><label class="pick">Local MP4 &nbsp; <input type="file" id="mp4" accept="video/mp4,.mp4"></label><video id="video" controls playsinline preload="metadata" hidden></video><p id="videoStatus" class="small" role="status"></p></div><div class="card sand"><h3>Watch carefully!</h3>${pair('What are the people doing?','Что делают люди?')}<h3>After watching</h3>${pair('Is this sport interesting or strange?','Этот вид спорта интересный или странный?')}${pair('Would you like to watch it?','Вы бы хотели его посмотреть?')}</div></div>`,['12:00–17:00','Watch carefully. What are the people doing?','Смотрите внимательно. Что делают люди?','Choose one clip and play about 30–60 seconds. Ask students to answer before and after watching.','They are racing cockroaches. / The rider is picking up an object. Opinions vary.','Preview online clips before class. If a clip is unavailable, use the illustration and ask the same questions.']);
+add('Cockroach Racing','05 / Reading · Australia','Гонки тараканов','<div class="grid reading"><div>'+card('Brisbane, Australia · 1982',pair('Two men argued about cockroaches. The next day, they held a race. The insects run from the centre to the edge of a circle.','В Брисбене в 1982 году двое мужчин поспорили о тараканах. На следующий день они устроили гонку. Тараканы бегут от центра круга к краю.'),'sand')+'<p class="tag">Open your books · Page 37</p></div>'+bugs+'</div>',['17:00–19:30','Open your books at page 37. Let’s read the first text.','Откройте учебники на странице 37. Давайте прочитаем первый текст.','Ask two volunteers to read different parts aloud. The class scans for place, date and rules.','Brisbane, 1982, from the centre to the edge.','Ask which detail answers a warm-up question. The circle rule is lesson context supplied with the brief; the visible passage does not explain the track layout.']);
+add('Check your reading','05 / Reading · Australia','Проверьте понимание текста',reveal('au1','1. Where do cockroach races take place?'+ru('Где проходят гонки тараканов?'),'In Brisbane, Australia.'+ru('В Брисбене, Австралия.'))+reveal('au2','2. When did the races begin?'+ru('Когда начались гонки?'),'In 1982.'+ru('В 1982 году.'))+reveal('au3','3. How does a cockroach win?'+ru('Как таракан побеждает?'),'By reaching the edge of the circle first.'+ru('Он должен первым добежать до края круга.')),['19:30–21:00','Find the answers in the text. Who can answer number one?','Найдите ответы в тексте. Кто ответит на первый вопрос?','Elicit one answer at a time, then reveal it.','Brisbane, Australia. In 1982. By reaching the edge first.','Accept short answers and ask one learner to turn an answer into a full sentence.']);
+add('Kumis Alu','05 / Reading · Kazakhstan','Күміс алу — национальная конная игра','<div class="grid reading"><div>'+card('A traditional horse sport',pair('At a full gallop, riders lean down to pick up handkerchiefs. The rider who grabs the most wins. It is an ancient game.','Всадники скачут во весь опор, наклоняются и подхватывают платки с земли. Побеждает тот, кто соберёт больше всех. Это древняя игра.'),'mint')+'<p class="tag">Open your books · Page 37</p></div>'+horse+'</div>',['21:00–23:30','Now let’s read about Kumis Alu. How does a rider win?','Теперь прочитаем о Күміс алу. Как всадник побеждает?','Have students read the second text aloud. Ask them to point to the actions in the illustration.','The rider who grabs the most handkerchiefs wins.','Model “at a full gallop” and ask learners to locate the phrase.']);
+add('Check your reading','05 / Reading · Kazakhstan','Проверьте понимание текста',reveal('kz1','1. What animal do players ride?'+ru('На каком животном едут участники?'),'A horse.'+ru('На лошади.'))+reveal('kz2','2. What does the rider try to pick up?'+ru('Что всадник пытается поднять?'),'A handkerchief.'+ru('Носовой платок.'))+reveal('kz3','3. Is Kumis Alu still popular in Kazakhstan?'+ru('Күміс алу всё ещё популярна в Казахстане?'),'Yes, it is.'+ru('Да, эта игра по-прежнему популярна.')),['23:30–25:00','What does the rider pick up? Use the text to check.','Что поднимает всадник? Проверьте по тексту.','Let pairs answer, then reveal the answers.','A horse. A handkerchief. Yes, it is.','Return briefly to unanswered warm-up questions.']);
+add('Grammar in the text','05 / Reading · Language focus','Грамматика в тексте','<div class="grid">'+card('Present Perfect',pair('I’ve seen a lot of strange things.','Я видел много странных вещей.')+ru('Говорим о своём опыте. Точное время не указано.'),'sky')+card('Past Simple',pair('The races began in 1982.','Гонки начались в 1982 году.')+ru('Говорим о событии в прошлом. Здесь указан конкретный год.'),'sand')+'</div>',['25:00–27:00','Which sentence tells us exactly when something happened?','В каком предложении сказано, когда именно произошло событие?','Ask students to identify the year and the two verb forms.','The second sentence. In 1982. I’ve seen / began.','Treat this as a quick observation about the reading.']);
+add('True, False or Doesn’t Say?','06 / Exercise 2 · Page 37','Правда, неправда или не сказано?','<div class="grid three">'+card('T · True',pair('The statement matches the text.','Утверждение соответствует тексту.'),'mint')+card('F · False',pair('The text says something different.','В тексте сказано иначе.'),'sand')+card('DS · Doesn’t Say',pair('The text does not give this information.','В тексте нет этой информации.'),'sky')+'</div><p>Correct the false sentences.'+ru('Исправьте неверные утверждения.')+'</p>',['27:00–28:00','If the text gives different information, choose False. If the information is missing, choose Doesn’t Say.','Если в тексте сказано иначе, выбирайте False. Если этой информации нет, выбирайте Doesn’t Say.','Ask students to explain the difference in their own words.','False has contradictory evidence. DS has no evidence for the claim.','Point out that an unfamiliar claim can still be true if the passage confirms it.']);
+add('Find the evidence','06 / Exercise 2 · Australia','Найдите подтверждение в тексте',quiz('tf',tf.slice(0,2))+reset,['28:00–31:00','Read the first two statements. Choose T, F or DS and find your evidence.','Прочитайте первые два утверждения. Выберите T, F или DS и найдите подтверждение в тексте.','Students choose in pairs. Ask for evidence, select the class answer and click Check.','1 T — two men argued. 2 F — the cockroaches race from the centre of a circle to its edge.','Ask a student to say the corrected second sentence in English. The exercise key supplied with the brief marks it F; the circle layout is supplemental context and is not explicit in the printed passage.']);
+add('Find the evidence','06 / Exercise 2 · Kazakhstan','Найдите подтверждение в тексте',quiz('tf',tf.slice(2),2)+reset,['31:00–34:00','What does the text tell us about Alexander the Great? Is the sport still popular?','Что в тексте сказано об Александре Македонском? Популярна ли игра до сих пор?','Ask pairs to choose before checking, then elicit a corrected fourth sentence.','3 DS — the text gives Alexander’s opinion. 4 F — Kumis alu is still popular in Kazakhstan.','For item 3, ask students to point to the sentence about training and explain why it is insufficient.']);
+add('Let’s talk!','07 / Exercise 3 · Speaking','Какое из этих мероприятий вы хотели бы посетить? Почему?',`<p class="lede">Which of the events would you like to attend? Why? Say or write.</p><div class="grid">${card('Cockroach Racing','Australia','sand')}${card('Kumis Alu','Kazakhstan','mint')}</div><p class="pair"><strong>I would like to attend ______ because ______.</strong>${ru('Я хотел(а) бы посетить ______, потому что ______.')}</p>${reveal('models','Show speaking examples',pair('I would like to watch cockroach racing because it is unusual.','Я бы хотел посмотреть гонки тараканов, потому что это необычно.')+pair('I would like to attend Kumis Alu because it is exciting.','Я бы хотел сходить на Күміс алу, потому что это захватывающее соревнование.')+pair('I wouldn’t like to watch cockroach racing because I don’t like insects.','Я бы не хотел смотреть гонки тараканов, потому что не люблю насекомых.'))}`,['34:00–36:30','Which of the events would you like to attend? Why? Ask your partner.','Какое из этих мероприятий вы хотели бы посетить? Почему? Спросите партнёра.','Pairs take turns speaking or write one sentence. Invite two responses.','I would like to attend Kumis Alu because it is exciting. Accept any clear reason.','Reveal examples only if students need support or after their first attempts.']);
+add('Write in your notebooks','07 / Notebook','Запишите в тетради',`<p class="lede"><strong>My Amazing Travels</strong></p><div class="grid three">${card('Cockroach Racing','<ul><li>Brisbane, Australia</li><li>Started in 1982</li><li>Cockroaches race to the edge of a circle</li></ul>','sand')}${card('Kumis Alu','<ul><li>Kazakhstan</li><li>Traditional horse sport</li><li>Riders pick up objects from the ground</li><li>An ancient game</li></ul>','mint')}${card('Key words','<ul><li>Cockroach — таракан</li><li>Race — гонка</li><li>Gallop — скакать галопом</li><li>Handkerchief — носовой платок</li><li>Grab — схватить</li><li>Speed — скорость</li></ul>','sky')}</div><p><button data-notebook aria-pressed="false">Notebook mode</button></p>`,['36:30–38:00','Write the title and the key points in your notebooks.','Запишите заголовок и основные сведения в тетрадь.','Let learners copy the key points or finish the notes after the lesson.','Notes should include the two countries, the two sports and the key words.','Notebook mode removes coloured card backgrounds for a clearer board.']);
+add('My Travel Passport','08 / Reflection','Мой паспорт путешественника',`<div class="grid"><div class="card sand prompts">${pair('One new word I learned today is…','Одно новое слово, которое я сегодня выучил(а), — …')}${pair('One interesting fact I learned is…','Один интересный факт, который я сегодня узнал(а), — …')}${pair('I would like to visit… because…','Я хотел(а) бы посетить… потому что…')}</div><div class="card sky"><h3>✈ Choose a destination</h3><div class="choices"><button class="option" data-country="Australia" aria-pressed="false">🇦🇺 Australia</button><button class="option" data-country="Kazakhstan" aria-pressed="false">🇰🇿 Kazakhstan</button></div><div id="stamp" role="status"></div></div></div>`,['38:00–43:00','Before we finish, let’s complete our Travel Passport.','Прежде чем закончить урок, давайте заполним паспорт путешественника.','Ask two or three students to share answers aloud. Invite them to choose a destination stamp.','One new word is “saddle.” The first race took place in Brisbane. I’d like to visit Australia because I want to see the race.','Keep the activity oral. Invite different learners to answer different prompts.']);
+add('Homework','09 / Exercise 4 · Page 37','Домашнее задание',`<p class="lede"><strong>Write 5–6 sentences about an annual event you have attended in your country.</strong>${ru('Напишите 5–6 предложений о ежегодном мероприятии в вашей стране, на котором вы побывали.')}</p><div class="grid"><div class="card sand"><h3>Include</h3><ul><li>Name, place and time</li><li>What people do</li><li>Why you like it</li></ul>${ru('Укажите название, место, время, что люди делают и почему вам нравится это мероприятие.')}</div><div>${reveal('hw','Show model · Nauryz','Nauryz is a traditional spring festival in Kazakhstan. I attended it in my city in March. People wore national clothes and prepared traditional food. There were games, music and competitions. I like Nauryz because it brings people together.')}</div></div><p class="small">Be ready to read your paragraph to the class.${ru('Будьте готовы прочитать свой текст классу.')}</p>`,['43:00–44:30','For homework, write about an annual event you have attended in Kazakhstan. Be ready to read your paragraph to the class.','Дома напишите о ежегодном мероприятии в Казахстане, на котором вы побывали. Будьте готовы прочитать свой текст классу.','Students record page 37, Exercise 4. Open the model if needed.','Five to six sentences with name, place, time, activities and a reason.','Invite students to adapt the structure using their own experience.']);
+add('Great job, explorers!','09 / Arrivals','Отличная работа! Вы завершили наше путешествие!',`<p class="lede">You completed your journey!</p><div><span class="stamp">🇦🇺 AUSTRALIA</span><span class="stamp">🇰🇿 KAZAKHSTAN</span></div><p><strong>Thank you for the lesson!</strong><br>See you next time!</p>`,['44:30–45:00','Thank you for the lesson. See you next time!','Спасибо за урок. До следующей встречи!','Say goodbye and remind students to bring their homework.','See you next time!','Leave the homework slide open afterwards if students need more time to copy the assignment.']);
+
+const state = {index:0, quiz:{}, reveals:new Set(), country:'', notebook:false, videoUrl:''};
+const stage = byId('stage');
+const modal = byId('modal');
+const boardLayout = window.matchMedia('(orientation: landscape) and (max-height: 600px)');
+let fittedArticle;
+function fitSlide() {
+ const article = fittedArticle;
+ if (!boardLayout.matches || !article || !stage.clientHeight || !article.offsetHeight) {
+  delete stage.dataset.fitted;
+  return;
+ }
+ const height = article.offsetHeight;
+ const scale = Math.min(1, stage.clientHeight / height);
+ stage.style.setProperty('--slide-scale', scale);
+ stage.style.setProperty('--slide-offset', Math.max(0,(stage.clientHeight - height * scale) / 2) + 'px');
+ stage.dataset.fitted = '';
+}
+const slideSizer = new ResizeObserver(fitSlide);
+slideSizer.observe(stage);
+boardLayout.addEventListener('change',fitSlide);
+
+const notesLabels = ['Estimated time','Say in English','Russian translation','Student action','Expected answers','Teaching tip'];
+let presenter = null;
+let notesOpen = false;
+function notesMarkup(index) {
+ const slide = slides[index];
+ const notes = slide.notes.map((note,i) => '<dt>' + notesLabels[i] + '</dt><dd' + (i === 2 ? ' lang="ru"' : '') + '>' + note + '</dd>').join('');
+ return '<p class="eyebrow">' + slide.phase + '</p><h2>' + (index+1) + '. ' + slide.title + '</h2><dl class="notes">' + notes + '</dl><div class="card"><strong>Next slide</strong><p>' + (slides[index+1] ? slides[index+1].title + ru(slides[index+1].subtitle) : 'End of lesson') + '</p></div>';
+}
+function syncNotes() {
+ if (presenter && !presenter.closed) {
+  const doc = presenter.document;
+  const panel = doc.getElementById('presenterNotes');
+  if (panel) {
+   panel.innerHTML = notesMarkup(state.index);
+   doc.getElementById('presenterPrev').disabled = state.index === 0;
+   doc.getElementById('presenterNext').disabled = state.index === slides.length-1;
+  }
+ }
+ if (notesOpen && modal.open) byId('modalBody').innerHTML = notesMarkup(state.index);
+}
+function paintQuiz(quizCard) {
+ const key = quizCard.dataset.quiz;
+ const isTF = key.startsWith('tf');
+ const data = (isTF ? tf : vocabQuiz)[Number(key.replace(/^\D+/,''))];
+ const response = state.quiz[key];
+ const selection = response?.selection;
+ const checked = response?.checked;
+ const correct = data[1];
+ quizCard.querySelectorAll('.option').forEach(button => {
+  const value = button.textContent;
+  button.setAttribute('aria-pressed', String(value === selection));
+  button.classList.toggle('correct', Boolean(checked && value === correct));
+  button.classList.toggle('wrong', Boolean(checked && value === selection && value !== correct));
+ });
+ const check = quizCard.querySelector('.check');
+ if (check) check.disabled = !selection || checked;
+ const message = quizCard.querySelector('.feedback');
+ message.innerHTML = checked ? '<strong>' + (selection === correct ? '✓ Correct' : 'Answer: ' + correct) + '</strong>' + ru(data[2]) + (isTF ? '<p>' + data[3] + '</p>' : '') : '';
+}
+function paintStamp() {
+ const stamp = byId('stamp');
+ if (!stamp) return;
+ stage.querySelectorAll('[data-country]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.country === state.country)));
+ stamp.innerHTML = state.country ? '<span class="stamp">' + (state.country === 'Australia' ? '🇦🇺 AUSTRALIA' : '🇰🇿 KAZAKHSTAN') + '</span>' : '';
+}
+function render(focus = false) {
+ const slide = slides[state.index];
+ stage.classList.toggle('notebook',state.notebook && slide.phase.includes('Notebook'));
+ stage.innerHTML = '<article>' + (state.index === 0 ? '' : '<p class="eyebrow">' + slide.phase + '</p><h1 class="heading" tabindex="-1">' + slide.title + '</h1><p class="sub">' + ru(slide.subtitle) + '</p>') + slide.body + '</article>';
+ stage.querySelectorAll('[data-reveal]').forEach(button => {
+  const opened = state.reveals.has(button.dataset.reveal);
+  button.setAttribute('aria-expanded',String(opened));
+  byId(button.dataset.reveal).hidden = !opened;
+ });
+ stage.querySelectorAll('[data-quiz]').forEach(paintQuiz);
+ const notebook = stage.querySelector('[data-notebook]');
+ if (notebook) notebook.setAttribute('aria-pressed',String(state.notebook));
+ const video = byId('video');
+ if (video && state.videoUrl) {
+  video.src = state.videoUrl;
+  video.hidden = false;
+ }
+ if (video) video.addEventListener('error', () => { byId('videoStatus').textContent = 'This video could not be played. Try another MP4.'; });
+ paintStamp();
+ byId('counter').textContent = (state.index+1) + ' / ' + slides.length;
+ const progress = byId('progress');
+ progress.setAttribute('aria-valuemin','0');
+ progress.setAttribute('aria-valuemax',String(slides.length));
+ progress.setAttribute('aria-valuenow',String(state.index+1));
+ progress.firstElementChild.style.width = ((state.index+1)/slides.length*100) + '%';
+ byId('prev').disabled = state.index === 0;
+ byId('next').disabled = state.index === slides.length-1;
+ if (fittedArticle) slideSizer.unobserve(fittedArticle);
+ fittedArticle = stage.querySelector('article');
+ slideSizer.observe(fittedArticle);
+ fitSlide();
+ syncNotes();
+ if (focus) stage.querySelector('h1').focus({preventScroll:true});
+}
+function go(index, focus = true) {
+ const target = Math.max(0,Math.min(slides.length-1,index));
+ if (target === state.index) return;
+ state.index = target;
+ render(focus);
+ stage.scrollTop = 0;
+ window.scrollTo(0,0);
+}
+function openModal(title, body, showNotes = false) {
+ byId('modalTitle').textContent = title;
+ byId('modalBody').innerHTML = body;
+ notesOpen = showNotes;
+ if (!modal.open) modal.showModal();
+}
+function openPresenter() {
+ if (presenter && !presenter.closed) { presenter.focus(); return; }
+ presenter = window.open('','lesson-presenter','popup,width=720,height=820');
+ if (!presenter) {
+  openModal('Teacher notes · visible on this screen','<p>Open notes after pausing classroom projection.</p><button id="showNotes">Show notes for this slide</button>');
+  byId('showNotes').onclick = () => openModal('Teacher notes',notesMarkup(state.index),true);
+  return;
+ }
+ const doc = presenter.document;
+ doc.open();
+ doc.write('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teacher · My Amazing Travels</title><style>' + document.querySelector('style').textContent + 'body{padding:24px;background:#fffdf7;font-size:20px;line-height:1.35} .eyebrow{font-size:.75em}</style><main id="presenterNotes"></main><div class="choices"><button id="presenterPrev">← Previous</button><button id="presenterNext">Next →</button></div></html>');
+ doc.close();
+ doc.getElementById('presenterPrev').onclick = () => go(state.index-1,false);
+ doc.getElementById('presenterNext').onclick = () => go(state.index+1,false);
+ doc.addEventListener('keydown',event => navigateKeys(event,false));
+ syncNotes();
+}
+function navigateKeys(event, focus) {
+ if (event.altKey || event.ctrlKey || event.metaKey || /^(INPUT|TEXTAREA|SELECT|VIDEO)$/.test(event.target.tagName)) return;
+ if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+  event.preventDefault();
+  go(state.index + (event.key === 'ArrowRight' ? 1 : -1),focus);
+ }
+}
+stage.addEventListener('click', event => {
+ const button = event.target.closest('button');
+ if (!button) return;
+ if (button.dataset.reveal) {
+  const id = button.dataset.reveal;
+  const opened = !state.reveals.has(id);
+  if (opened) state.reveals.add(id); else state.reveals.delete(id);
+  button.setAttribute('aria-expanded',String(opened));
+  byId(id).hidden = !opened;
+ }
+ const quizCard = button.closest('[data-quiz]');
+ if (quizCard) {
+  const key = quizCard.dataset.quiz;
+  if (button.classList.contains('option')) state.quiz[key] = {selection:button.textContent,checked:key.startsWith('v')};
+  if (button.classList.contains('check') && state.quiz[key]?.selection) state.quiz[key].checked = true;
+  paintQuiz(quizCard);
+ }
+ if ('reset' in button.dataset) {
+  const prefix = stage.querySelector('[data-quiz]').dataset.quiz.replace(/\d+$/,'');
+  for (const key of Object.keys(state.quiz)) if (key.startsWith(prefix)) delete state.quiz[key];
+  stage.querySelectorAll('[data-quiz]').forEach(paintQuiz);
+ }
+ if ('notebook' in button.dataset) {
+  state.notebook = !state.notebook;
+  stage.classList.toggle('notebook',state.notebook);
+  button.setAttribute('aria-pressed',String(state.notebook));
+ }
+ if (button.dataset.country) { state.country = button.dataset.country; paintStamp(); }
+});
+stage.addEventListener('change', event => {
+ if (event.target.id !== 'mp4') return;
+ const file = event.target.files[0];
+ if (!file) return;
+ const video = byId('video');
+ if (state.videoUrl) URL.revokeObjectURL(state.videoUrl);
+ state.videoUrl = URL.createObjectURL(file);
+ video.src = state.videoUrl;
+ video.hidden = false;
+ byId('videoStatus').textContent = file.name;
+});
+byId('home').onclick = () => go(0);
+byId('prev').onclick = () => go(state.index-1);
+byId('next').onclick = () => go(state.index+1);
+byId('teacher').onclick = openPresenter;
+byId('overview').onclick = () => {
+ const buttons = slides.map((slide,index) => '<button data-slide="' + index + '" aria-current="' + (index === state.index) + '">' + (index+1) + '. ' + slide.title + '</button>').join('');
+ openModal('Slide overview','<div class="overview">' + buttons + '</div>');
+};
+byId('modalBody').addEventListener('click',event => {
+ const target = event.target.closest('[data-slide]');
+ if (!target) return;
+ modal.close();
+ go(Number(target.dataset.slide));
+});
+byId('close').onclick = () => modal.close();
+modal.addEventListener('close', () => { notesOpen = false; byId('modalBody').replaceChildren(); });
+const fullscreenButton = byId('fullscreen');
+const touchScreen = window.matchMedia('(pointer: coarse)');
+let landscapeLocked = false;
+fullscreenButton.onclick = async () => {
+ try {
+  if (document.fullscreenElement) {
+   await document.exitFullscreen();
+   return;
+  }
+  await document.documentElement.requestFullscreen();
+ } catch {
+  openModal('Fullscreen', touchScreen.matches
+   ? '<p>Turn your phone sideways to use the 16:9 layout. This browser may keep its toolbar visible.</p>'
+   : '<p>Use the browser’s fullscreen command (F11 on most Windows browsers).</p>');
+  return;
+ }
+ if (touchScreen.matches && screen.orientation?.lock) {
+  try {
+   await screen.orientation.lock('landscape');
+   landscapeLocked = Boolean(document.fullscreenElement);
+   if (!landscapeLocked) screen.orientation.unlock();
+  } catch {
+   // The 16:9 layout also works when the device is rotated manually.
+  }
+ }
+};
+document.addEventListener('fullscreenchange', () => {
+ const active = Boolean(document.fullscreenElement);
+ fullscreenButton.textContent = active ? 'Exit fullscreen' : 'Fullscreen';
+ if (!active && landscapeLocked) {
+  screen.orientation.unlock();
+  landscapeLocked = false;
+ }
+});
+document.addEventListener('keydown',event => { if (!modal.open) navigateKeys(event,true); });
+render();
+</script>
+</body>
+</html>
